@@ -13,24 +13,28 @@ const meta: Meta<typeof MyButton> = {
     },
     template: "<MyButton v-bind='args' />",
   }),
-};
-
-export const Default: Story = {
   args: {
     label: "ボタン",
+    variant: "primary",
+    size: "medium",
+  },
+  // ここに args の型情報を定義
+  argTypes: {
+    variant: {
+      control: {
+        type: "inline-radio",
+      },
+      options: ["primary", "secondary"],
+    },
+    size: {
+      control: {
+        type: "select",
+      },
+      options: ["small", "medium", "large"],
+    },
   },
 };
 
-export const Login: Story = {
-  args: {
-    label: "ログイン",
-  },
-};
-
-export const SignUp: Story = {
-  args: {
-    label: "会員登録",
-  },
-};
+export const Default: Story = {};
 
 export default meta;

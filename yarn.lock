@@ -1230,6 +1230,21 @@
     lodash "^4.17.21"
     ts-dedent "^2.0.0"
 
+"@storybook/addon-viewport@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.0.2.tgz#e3ee6a9fdae03f4fdccd76e7a9b394f13b12ed1f"
+  integrity sha512-TaHJWIIazPM/TerRbka9RqjMPNpwaRsGRdVRBtVoVosy1FzsEjAdQSO7RBMe4G03m5CacSqdsDiJCblI2AXaew==
+  dependencies:
+    "@storybook/client-logger" "7.0.2"
+    "@storybook/components" "7.0.2"
+    "@storybook/core-events" "7.0.2"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.0.2"
+    "@storybook/preview-api" "7.0.2"
+    "@storybook/theming" "7.0.2"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+
 "@storybook/blocks@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.0.2.tgz#b4bdcb9ca48d89804dd5ad939abc3b0c2df73e35"

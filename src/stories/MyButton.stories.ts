@@ -13,12 +13,12 @@ const meta: Meta<typeof MyButton> = {
     },
     template: "<MyButton v-bind='args' />",
   }),
+  tags: ["autodocs"], // ここを追加
   args: {
     label: "ボタン",
     variant: "primary",
     size: "medium",
   },
-  // ここに args の型情報を定義
   argTypes: {
     variant: {
       control: {
@@ -35,6 +35,12 @@ const meta: Meta<typeof MyButton> = {
   },
 };
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    label: "ボタン",
+    variant: "primary",
+    size: "medium",
+  },
+};
 
 export default meta;

@@ -30,6 +30,19 @@ const meta: Meta<typeof MyPage> = {
         },
       },
     },
+    backgrounds: {
+      default: "twitter",
+      values: [
+        {
+          name: "twitter",
+          value: "#00aced",
+        },
+        {
+          name: "facebook",
+          value: "#3b5998",
+        },
+      ],
+    },
   },
 };
 
@@ -45,6 +58,9 @@ export const ForMobile: Story = {
   parameters: {
     viewport: {
       defaultViewport: "mobile",
+    },
+    backgrounds: {
+      default: "facebook",
     },
   },
 };

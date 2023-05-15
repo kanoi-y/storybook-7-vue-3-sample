@@ -1,8 +1,17 @@
 <script setup lang="ts">
 
 type Props = {
+  /**
+   * ボタンに表示するテキスト
+   */
   label: string;
+   /**
+   * ボタンのカラーテーマ
+   */
   variant?: "primary" | "secondary";
+  /**
+   * ボタンのサイズ
+   */
   size?: "small" | "medium" | "large";
 }
 const props = withDefaults(defineProps<Props>(), {
@@ -10,7 +19,12 @@ const props = withDefaults(defineProps<Props>(), {
   size: "medium",
 });
 
-const emits = defineEmits(["click"]);
+const emits = defineEmits([
+   /**
+   * ボタンがクリックされた
+   */
+  "click",
+]);
 </script>
 
 <template>

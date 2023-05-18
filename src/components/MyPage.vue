@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import MyHeader from "./MyHeader.vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n()
 
 type User = {
   id: number;
@@ -32,7 +35,7 @@ const signUp = () => {
     <main>
       <div class="content-wrapper">
         <div class="content" :key="i" v-for="i in 10">
-          {{ "コンテンツがここに表示されます".repeat(20) }}
+          {{ t("page.content").repeat(20) }}
         </div>
       </div>
     </main>

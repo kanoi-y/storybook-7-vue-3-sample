@@ -12,6 +12,7 @@ const config: StorybookConfig = {
     "@storybook/addon-outline",
     "@storybook/addon-docs",
     "@storybook/addon-interactions",
+    "@storybook/addon-toolbars",
   ],
 };
 

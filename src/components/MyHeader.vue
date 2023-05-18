@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import MyButton from "./MyButton.vue";
+
+const { t } = useI18n()
 
 type Props = {
   isLoggedIn: boolean;
@@ -12,14 +15,26 @@ const emits = defineEmits(["login", "signUp", "logout"]);
 
 <template>
   <header>
-    <h1>Storybook 7 + Vue 3 + TypeScript サンプル</h1>
+    <h1>{{ t("header.title") }}</h1>
     <div class="buttons">
       <template v-if="props.isLoggedIn">
-        <MyButton size="small" label="ログアウト" @click="emits('logout')" />
+        <MyButton
+          size="small"
+          :label="t('header.logout')"
+          @click="emits('logout')"
+        />
       </template>
       <template v-else>
-        <MyButton size="small" label="ログイン" @click="emits('login')" />
-        <MyButton size="small" label="会員登録" @click="emits('signUp')" />
+        <MyButton
+          size="small"
+          :label="t('header.login')"
+          @click="emits('login')"
+        />
+        <MyButton
+          size="small"
+          :label="t('header.signUp')"
+          @click="emits('signUp')"
+        />
       </template>
     </div>
   </header>

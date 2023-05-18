@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.2.47",
-    "vue-i18n": "9"
+    "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "7.0.2",
@@ -20,6 +20,7 @@
     "@storybook/addon-interactions": "7.0.2",
     "@storybook/addon-measure": "7.0.2",
     "@storybook/addon-outline": "7.0.2",
+    "@storybook/addon-toolbars": "7.0.2",
     "@storybook/addon-viewport": "7.0.2",
     "@storybook/jest": "^0.1.0",
     "@storybook/test-runner": "0.10.0",

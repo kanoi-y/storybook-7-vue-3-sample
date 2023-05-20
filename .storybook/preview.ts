@@ -12,10 +12,11 @@ setup((app) => {
 export const parameters: Parameters = {};
 export const decorators: Decorator[] = [
   (story, context) => {
-    i18n.global.locale = context.globals.locale;
+    i18n.global.locale.value = context.globals.locale;
     return { template: "<story />" };
   },
 ];
+
 export const globalTypes = {
   locale: {
     description: "多言語設定",

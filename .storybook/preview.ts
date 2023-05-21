@@ -1,6 +1,9 @@
 import { Decorator, Parameters, setup } from "@storybook/vue3";
 import i18n from "../src/i18n";
+import { createRouter } from "../src/router";
 import pinia, { useCurrentUserStore } from "../src/pinia";
+
+const router = createRouter("memory");
 
 
 setup((app) => {
@@ -9,6 +12,7 @@ setup((app) => {
   if (!app.__VUE_I18N__) {
     app.use(i18n);
     app.use(pinia);
+    app.use(router);
   }
 });
 
